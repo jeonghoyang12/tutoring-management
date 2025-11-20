@@ -136,15 +136,6 @@ export default function StudentDetailPage() {
     }
   };
 
-  const handleRecordReview = async (wrongAnswerId: number) => {
-    try {
-      const result = await wrongAnswersApi.recordReview(wrongAnswerId);
-      fetchData();
-    } catch (error) {
-      console.error("Failed to record review:", error);
-    }
-  };
-
   const handleToggleMastered = async (
     wrongAnswerId: number,
     currentMastered: boolean
